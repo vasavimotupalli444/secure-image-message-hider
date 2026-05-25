@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Image Message Hider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <button class="theme-toggle" onclick="toggleTheme()">
+        🌙 Toggle Mode
+    </button>
+
+    <div class="container">
+
+        <h1>Secure Image Message Hider</h1>
+
+        <div class="grid">
+
+            <!-- Encode Section -->
+            <div class="card">
+
+                <h2>Encode Message</h2>
+
+                <input type="file" id="encodeImage">
+
+                <img id="encodePreview" class="preview-image">
+
+                <textarea id="secretMessage"
+                    placeholder="Enter your secret message here..."></textarea>
+
+                <p id="charCount">0 characters</p>
+
+                <button onclick="encodeMessage()">
+                    Encode & Download
+                </button>
+
+            </div>
+
+            <!-- Decode Section -->
+            <div class="card">
+
+                <h2>Decode Message</h2>
+
+                <input type="file" id="decodeImage">
+
+                <img id="decodePreview" class="preview-image">
+
+                <button onclick="decodeMessage()">
+                    Decode Message
+                </button>
+
+                <div id="decodedText">
+                    Hidden message will appear here...
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
